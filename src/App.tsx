@@ -12,10 +12,13 @@ function App() {
     <>
       <Jupyter startDefaultKernel={true}>
         <IpyWidgetsComponent Widget={IPyWidgetsSimple}/>
+        <hr/>
         <OutputsComponents/>
+        <hr/>
         <CellComponents/>
+        <hr/>
         <Notebook
-          path={"/ping.ipynb"}
+          path="/ping.ipynb"
           CellSidebar={CellSidebarDefault}
           />
       </Jupyter>
