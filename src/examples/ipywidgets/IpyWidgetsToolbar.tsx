@@ -1,9 +1,11 @@
-import Typography from '@mui/material/Typography';
+import { Text } from '@primer/react';
 
 const IpyWidgetsToolbar = () => {
-  return <Typography variant="h5" gutterBottom>
-    IpyWidgets Example
-  </Typography>
+  return (
+    <Text as="h1">
+      IpyWidgets Example
+    </Text>
+  )
 };
   
 export default IpyWidgetsToolbar;

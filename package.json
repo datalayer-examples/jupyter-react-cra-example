@@ -1,5 +1,5 @@
 {
-  "name": "@datalayer/jupyter-create-react-app-example",
+  "name": "@datalayer-examples/jupyter-create-react-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,17 +8,11 @@
     "start:react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "kill": "./dev/sh/kill-jupyter-server.sh"
   },
   "dependencies": {
-    "@datalayer/jupyter-react": "0.0.25",
-    "@emotion/react": "11.4.0",
-    "@emotion/styled": "11.3.0",
-    "@mui/material": "5.8.3",
-    "@mui/icons-material": "5.8.3",
-    "@mui/lab": "5.0.0-alpha.85",
-    "@mui/styles": "5.8.3",
-    "@mui/system": "5.8.3",
+    "@datalayer/jupyter-react": "0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "web-vitals": "2.1.4"

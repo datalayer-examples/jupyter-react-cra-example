@@ -1,8 +1,21 @@
-import { color0 } from './Theme';
-import { color1 } from './Theme';
-import { color2 } from './Theme';
-import { color3 } from './Theme';
-import { color4 } from './Theme';
+const colors = [
+  "#d87c7c",
+  "#919e8b",
+  "#d7ab82",
+  "#6e7074",
+  "#61a0a8",
+  "#efa18d",
+  "#787464",
+  "#cc7e63",
+  "#724e58",
+  "#4b565b"
+];
+
+export const color0 = colors[0];
+export const color1 = colors[1];
+export const color2 = colors[2];
+export const color3 = colors[3];
+export const color4 = colors[4];
 
 const Layers = (props: any) => (
   <svg xmlns="http://www.w3.org/2000/layers" width="100%" height="20">

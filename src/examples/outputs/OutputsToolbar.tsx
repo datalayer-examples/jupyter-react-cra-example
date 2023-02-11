@@ -1,11 +1,11 @@
 import React from "react";
-import Typography from '@mui/material/Typography';
+import { Text } from '@primer/react';
 
 const OutputsToolbar: React.FC = () => {
   return (
-    <Typography variant="h5" gutterBottom>
+    <Text as="h5">
       Outputs Example
-    </Typography>
+    </Text>
   );
 }
 
