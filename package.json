@@ -1,7 +1,12 @@
 {
-  "name": "@datalayer-examples/jupyter-create-react-app",
+  "name": "@datalayer-examples/jupyter-create-react-app-example",
   "version": "0.1.0",
+  "description": "Jupyter Create React React Example",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datalayer-examples/jupyter-create-react-app-example.git"
+  },
   "scripts": {
     "start": "run-p -c start:*",
     "start:jupyter": "./dev/sh/start-jupyter-server.sh",
@@ -12,7 +17,7 @@
     "kill": "./dev/sh/kill-jupyter-server.sh"
   },
   "dependencies": {
-    "@datalayer/jupyter-react": "0.2.1",
+    "@datalayer/jupyter-react": "0.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "web-vitals": "2.1.4"
