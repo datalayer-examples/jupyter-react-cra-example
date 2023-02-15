@@ -1,8 +1,8 @@
 [![Datalayer](https://assets.datalayer.design/datalayer-25.svg)](https://datalayer.io)
 
-# 🪐 ⚛️ Jupyter Create React Example
+# 🪐 ⚛️ Jupyter React Create React App Example
 
-Example to showcase [Jupyter React](https://github.com/datalayer/jupyter-react) usage in a [Create React](https://reactjs.org/docs/create-a-new-react-app.html) application.
+Example to showcase [Jupyter React](https://github.com/datalayer/jupyter-react) usage in a [Create React Application](https://reactjs.org/docs/create-a-new-react-app.html).
 
 This is a dedicated repository for the example maintained and documented in https://github.com/datalayer/jupyter-react/tree/main/examples/create-react-app
 
