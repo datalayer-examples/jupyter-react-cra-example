@@ -1,11 +1,11 @@
 {
-  "name": "@datalayer-examples/jupyter-create-react-app-example",
+  "name": "@datalayer-examples/jupyter-react-cra-example",
   "version": "0.1.0",
-  "description": "Jupyter Create React React Example",
+  "description": "Jupyter React Create React Example",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/datalayer-examples/jupyter-create-react-app-example.git"
+    "url": "https://github.com/datalayer-examples/jupyter-react-cra-example.git"
   },
   "scripts": {
     "start": "run-p -c start:*",
