@@ -8,8 +8,8 @@
     "url": "https://github.com/datalayer-examples/jupyter-react-cra-example.git"
   },
   "scripts": {
-    "start": "run-p -c start:*",
-    "start:jupyter": "./dev/sh/start-jupyter-server.sh",
+    "start": "run-p -c 'start:*'",
+    "start_:jupyter": "./dev/sh/start-jupyter-server.sh",
     "start:react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -26,7 +26,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
+    "@types/jest": "29.4.0",
     "@types/node": "18.11.9",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
