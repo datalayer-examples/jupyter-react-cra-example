@@ -27,6 +27,7 @@ typedoc
 !**/.*ignore
 !**/.*rc
 !**/.*rc.js
+!**/.*rc.yml
 !**/.*config
 !*.*rc.json
 !**/.env
