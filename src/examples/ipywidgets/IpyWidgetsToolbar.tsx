@@ -1,6 +1,6 @@
 import { Text } from '@primer/react';
 
-const IpyWidgetsToolbar = () => {
+const IPyWidgetsToolbar = () => {
   return (
     <Text as="h1">
       IpyWidgets Example
@@ -8,4 +8,4 @@ const IpyWidgetsToolbar = () => {
   )
 };
   
-export default IpyWidgetsToolbar;
+export default IPyWidgetsToolbar;

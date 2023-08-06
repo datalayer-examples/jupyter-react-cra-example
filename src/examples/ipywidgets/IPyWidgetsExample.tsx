@@ -1,7 +1,7 @@
 import { render } from 'react-dom';
-import { Jupyter, IpyWidgetsComponent } from '@datalayer/jupyter-react';
+import { Jupyter, IPyWidgetsComponent } from '@datalayer/jupyter-react';
 import IPyWidgetsSimple from './IPyWidgetsSimple';
-import IpyWidgetsToolbar from './IpyWidgetsToolbar';
+import IPyWidgetsToolbar from './IPyWidgetsToolbar';
 import Layers from '../theme/Layers';
 
 import "./../index.css";
@@ -12,8 +12,8 @@ document.body.appendChild(div);
 render(
   <Jupyter collaborative={false} terminals={false}>
     <Layers />
-    <IpyWidgetsToolbar/>
-    <IpyWidgetsComponent Widget={IPyWidgetsSimple}/>
+    <IPyWidgetsToolbar/>
+    <IPyWidgetsComponent Widget={IPyWidgetsSimple}/>
   </Jupyter>
   ,
   div

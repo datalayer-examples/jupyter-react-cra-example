@@ -1,4 +1,4 @@
-import { Jupyter, IpyWidgetsComponent, Notebook, CellSidebarDefault } from '@datalayer/jupyter-react';
+import { Jupyter, IPyWidgetsComponent, Notebook, CellSidebarDefault } from '@datalayer/jupyter-react';
 import CellComponents from './examples/cell/CellComponents';
 import IPyWidgetsSimple from './examples/ipywidgets/IPyWidgetsSimple';
 import OutputsComponents from './examples/outputs/OutputsComponents';
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Jupyter startDefaultKernel={true}>
-        <IpyWidgetsComponent Widget={IPyWidgetsSimple}/>
+        <IPyWidgetsComponent Widget={IPyWidgetsSimple}/>
         <hr/>
         <OutputsComponents/>
         <hr/>
