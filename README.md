@@ -2,7 +2,7 @@
 
 # 🪐 ⚛️ Jupyter React Create React App Example
 
-Example to showcase [Jupyter React](https://github.com/datalayer/jupyter-react) usage in a [Create React Application](https://reactjs.org/docs/create-a-new-react-app.html).
+Example to showcase [Jupyter React](https://github.com/datalayer/jupyter-ui/tree/main/packages/react) usage in a [Create React Application](https://reactjs.org/docs/create-a-new-react-app.html).
 
 Read more on the [documentation pages](https://jupyter-ui.datalayer.tech/docs/examples/cra).
 
