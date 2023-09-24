@@ -10,6 +10,8 @@ echo
 
 export CURR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+trap $CURR_DIR/kill.sh EXIT
+
 ${CURR_DIR}/kill-jupyter-server.sh
 
 jupyter server \
