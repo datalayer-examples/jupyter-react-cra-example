@@ -1,43 +1,61 @@
-import { Jupyter, IPyWidgetsComponent, Notebook, CellSidebarDefault } from '@datalayer/jupyter-react';
+import { useState } from 'react';
+import { Jupyter, Notebook, CellSidebarRun } from '@datalayer/jupyter-react';
+import { Box } from '@primer/react';
+import { AppsIcon, CpuIcon } from '@primer/octicons-react';
+import { UnderlineNav } from '@primer/react/drafts';
 import CellComponents from './examples/cell/CellComponents';
-import IPyWidgetsSimple from './examples/ipywidgets/IPyWidgetsSimple';
 import OutputsComponents from './examples/outputs/OutputsComponents';
-
-import logo from './logo.svg';
+import JupyterLabHeadlessApp from './examples/labapp/JupyterLabHeadlessApp';
 
 import './App.css';
 
-function App() {
+const App = () => {
+  const [tab, setTab] = useState(0);
   return (
     <>
-      <Jupyter startDefaultKernel={true}>
-        <IPyWidgetsComponent Widget={IPyWidgetsSimple}/>
-        <hr/>
-        <OutputsComponents/>
-        <hr/>
-        <CellComponents/>
-        <hr/>
-        <Notebook
-          path="/ping.ipynb"
-          CellSidebar={CellSidebarDefault}
-          />
-      </Jupyter>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Box>
+        <Jupyter startDefaultKernel={true}>
+          <UnderlineNav aria-label='gallery'>
+            <UnderlineNav.Item
+              icon={CpuIcon}
+              aria-current={tab === 0 ? "page" : undefined}
+              onSelect={e => {
+                e.preventDefault();
+                setTab(0);
+              }}
+            >
+              Examples
+            </UnderlineNav.Item>
+            <UnderlineNav.Item
+              icon={AppsIcon}
+              aria-current={tab === 1 ? "page" : undefined}
+              onSelect={e => {
+                e.preventDefault();
+                setTab(1);
+              }}
+            >
+              Lab App
+            </UnderlineNav.Item>
+          </UnderlineNav>
+          { tab === 0 &&
+            <>
+              <OutputsComponents/>
+              <hr/>
+              <CellComponents/>
+              <hr/>
+              <Notebook
+                path="/ping.ipynb"
+                CellSidebar={CellSidebarRun}
+              />
+            </>
+          }
+          { tab === 1 &&
+            <>
+              <JupyterLabHeadlessApp/>
+            </>  
+          }
+        </Jupyter>
+      </Box>
     </>
   );
 }

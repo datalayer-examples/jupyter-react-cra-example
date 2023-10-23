@@ -131,9 +131,17 @@ const OUTPUT_3 = [
  * A simple example for the React Editor.
  */
 export const OutputsComponents = () => {
-  const { kernelManager } = useJupyter();
+  const { kernelManager, serverSettings } = useJupyter();
   const kernel = useMemo(() => {
-    if (kernelManager) return new Kernel({ kernelManager, kernelName: 'python3' });
+    if (kernelManager) {
+      return new Kernel({
+        kernelManager,
+        kernelName: 'python3',
+        kernelSpecName: 'python3',
+        kernelType: "notebook",
+        serverSettings,
+      });
+    }
   }, [kernelManager]);
   return  <>
     <h3>Simple Output</h3>
