@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Jupyter, Notebook, CellSidebarRun } from '@datalayer/jupyter-react';
 import { Box } from '@primer/react';
 import { AppsIcon, CpuIcon } from '@primer/octicons-react';
-import { UnderlineNav } from '@primer/react/drafts';
+import { UnderlineNav } from '@primer/react';
 import CellComponents from './examples/cell/CellComponents';
 import OutputsComponents from './examples/outputs/OutputsComponents';
 import JupyterLabHeadlessApp from './examples/labapp/JupyterLabHeadlessApp';
