@@ -1,28 +1,26 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { Button, Text } from '@primer/react';
-import { selectCell, cellActions } from '@datalayer/jupyter-react';
+import { Button, Text } from "@primer/react";
+import { useCellStore } from '@datalayer/jupyter-react';
 
 const CellToolbar: React.FC = () => {
-  const cell = selectCell();
-  const dispatch = useDispatch();
+  const cellStore = useCellStore();
   return (
     <>
       <Text as="h5">Cell Example</Text>
       <Button
         color="primary"
-        onClick={() => dispatch(cellActions.execute())}
+        onClick={() => cellStore.execute()}
         >
           Run
       </Button>
       <Button
         color="secondary"
-        onClick={() => dispatch(cellActions.outputsCount(0))}
+        onClick={() => cellStore.setOutputsCount(0)}
         >
           Reset outputs count
       </Button>
       <Text>
-        Outputs count: {cell.outputsCount}
+        Outputs count: {cellStore.outputsCount}
       </Text>
     </>
   );

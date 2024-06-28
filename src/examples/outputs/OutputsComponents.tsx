@@ -1,8 +1,15 @@
+/*
+ * Copyright (c) 2021-2023 Datalayer, Inc.
+ *
+ * MIT License
+ */
+
 import { useMemo } from 'react';
 import { IOutput } from '@jupyterlab/nbformat';
-import { useJupyter, Kernel, Output } from '@datalayer/jupyter-react';
+import { useJupyter, Kernel } from '@datalayer/jupyter-react';
+import { Output } from '@datalayer/jupyter-react/lib/components/output/Output';
 
-import "./../index.css";
+import "./../../App.css";
 
 const SOURCE_IPYWIDGET = `import ipywidgets as widgets
 widgets.IntSlider(
@@ -131,18 +138,18 @@ const OUTPUT_3 = [
  * A simple example for the React Editor.
  */
 export const OutputsComponents = () => {
-  const { kernelManager, serverSettings } = useJupyter();
+  const { kernelManager, serviceManager } = useJupyter();
   const kernel = useMemo(() => {
-    if (kernelManager) {
+    if (serviceManager && kernelManager)
       return new Kernel({
         kernelManager,
-        kernelName: 'python3',
-        kernelSpecName: 'python3',
-        kernelType: "notebook",
-        serverSettings,
+        kernelName: 'python',
+        kernelSpecName: 'python',
+        kernelType: 'notebook',
+        kernelspecsManager: serviceManager.kernelspecs,
+        sessionManager: serviceManager.sessions,
       });
-    }
-  }, [kernelManager]);
+  }, [kernelManager, serviceManager]);
   return  <>
     <h3>Simple Output</h3>
     <Output
