@@ -4,6 +4,8 @@
 
 # 🪐 ⚛️ Jupyter React Create React App Example
 
+> Create React App is depreacted - https://react.dev/blog/2025/02/14/sunsetting-create-react-app#how-to-migrate-to-a-framework
+
 Example to showcase [Jupyter React](https://github.com/datalayer/jupyter-ui/tree/main/packages/react) usage in a [Create React Application](https://reactjs.org/docs/create-a-new-react-app.html).
 
 Read more on the [documentation pages](https://jupyter-ui.datalayer.tech/docs/examples/cra).
